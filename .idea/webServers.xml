@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b67a457f-f624-4972-a400-7c6f44995278" name="nege.kz" url="http://185.146.3.197">
+        <fileTransfer accessType="SFTP" host="185.146.3.197" port="4446" sshConfigId="523e0aef-e038-4b0b-b19c-4a112e15036e" sshConfig="root@185.146.3.197:4446 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

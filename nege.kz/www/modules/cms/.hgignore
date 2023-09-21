@@ -1,0 +1,3 @@
+syntax: glob
+vendors/htmlpurifier/library/HTMLPurifier/DefinitionCache/*
+*.orig

@@ -1,0 +1,36 @@
+<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+
+2019-10-24 17:50:47 --- EMERGENCY: Database_Exception [ 2003 ]: SQLSTATE[HY000] [2003] Can't connect to MySQL server on 'srv-db-plesk06.ps.kz' (113 "Нет маршрута до узла") ~ MODPATH/database/classes/Kohana/Database/PDO.php [ 59 ] in /var/www/nege.kz/www/application/classes/Database/PDO/MySQL.php:9
+2019-10-24 17:50:47 --- DEBUG: #0 /var/www/nege.kz/www/application/classes/Database/PDO/MySQL.php(9): Kohana_Database_PDO->connect()
+#1 /var/www/nege.kz/www/modules/database/classes/Kohana/Database/PDO.php(130): Database_PDO_MySQL->connect()
+#2 /var/www/nege.kz/www/application/classes/Database/PDO/MySQL.php(28): Kohana_Database_PDO->query(1, 'SHOW FULL COLUM...', false)
+#3 /var/www/nege.kz/www/modules/orm/classes/Kohana/ORM.php(1665): Database_PDO_MySQL->list_columns('categories')
+#4 /var/www/nege.kz/www/modules/orm/classes/Kohana/ORM.php(441): Kohana_ORM->list_columns()
+#5 /var/www/nege.kz/www/modules/orm/classes/Kohana/ORM.php(386): Kohana_ORM->reload_columns()
+#6 /var/www/nege.kz/www/modules/orm/classes/Kohana/ORM.php(254): Kohana_ORM->_initialize()
+#7 /var/www/nege.kz/www/modules/orm/classes/Kohana/ORM.php(46): Kohana_ORM->__construct(NULL)
+#8 /var/www/nege.kz/www/application/classes/Model/News.php(492): Kohana_ORM::factory('Category')
+#9 /var/www/nege.kz/www/application/classes/Controller/Welcome.php(22): Model_News::get_category_news()
+#10 /var/www/nege.kz/www/system/classes/Kohana/Controller.php(84): Controller_Welcome->action_index()
+#11 [internal function]: Kohana_Controller->execute()
+#12 /var/www/nege.kz/www/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Welcome))
+#13 /var/www/nege.kz/www/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#14 /var/www/nege.kz/www/system/classes/Kohana/Request.php(990): Kohana_Request_Client->execute(Object(Request))
+#15 /var/www/nege.kz/www/index.php(121): Kohana_Request->execute()
+#16 {main} in /var/www/nege.kz/www/application/classes/Database/PDO/MySQL.php:9
+2019-10-24 17:51:21 --- EMERGENCY: Database_Exception [ 42S02 ]: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'nege_kz.categories' doesn't exist [ SHOW FULL COLUMNS FROM `categories` ] ~ MODPATH/database/classes/Kohana/Database/PDO.php [ 151 ] in /var/www/nege.kz/www/application/classes/Database/PDO/MySQL.php:28
+2019-10-24 17:51:21 --- DEBUG: #0 /var/www/nege.kz/www/application/classes/Database/PDO/MySQL.php(28): Kohana_Database_PDO->query(1, 'SHOW FULL COLUM...', false)
+#1 /var/www/nege.kz/www/modules/orm/classes/Kohana/ORM.php(1665): Database_PDO_MySQL->list_columns('categories')
+#2 /var/www/nege.kz/www/modules/orm/classes/Kohana/ORM.php(441): Kohana_ORM->list_columns()
+#3 /var/www/nege.kz/www/modules/orm/classes/Kohana/ORM.php(386): Kohana_ORM->reload_columns()
+#4 /var/www/nege.kz/www/modules/orm/classes/Kohana/ORM.php(254): Kohana_ORM->_initialize()
+#5 /var/www/nege.kz/www/modules/orm/classes/Kohana/ORM.php(46): Kohana_ORM->__construct(NULL)
+#6 /var/www/nege.kz/www/application/classes/Model/News.php(492): Kohana_ORM::factory('Category')
+#7 /var/www/nege.kz/www/application/classes/Controller/Welcome.php(22): Model_News::get_category_news()
+#8 /var/www/nege.kz/www/system/classes/Kohana/Controller.php(84): Controller_Welcome->action_index()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /var/www/nege.kz/www/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Welcome))
+#11 /var/www/nege.kz/www/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /var/www/nege.kz/www/system/classes/Kohana/Request.php(990): Kohana_Request_Client->execute(Object(Request))
+#13 /var/www/nege.kz/www/index.php(121): Kohana_Request->execute()
+#14 {main} in /var/www/nege.kz/www/application/classes/Database/PDO/MySQL.php:28

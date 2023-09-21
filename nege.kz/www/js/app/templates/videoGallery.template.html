@@ -1,0 +1,35 @@
+<div class="form-group" ng-class="{'has-error': error}">
+    <label  class="control-label" ng-bind="label"></label>
+    <input name="{{field + '[0]'}}" type="hidden">
+    <div ng-repeat="(key,value) in hidden_fields">
+        <input type="hidden" name="{{field + '[0]['+key+']'}}" value="{{value}}">
+    </div>
+    <div  ng-repeat="file in files">
+
+        <div class="row">
+            <div class="col-md-11 form-group " ng-repeat="(key, title) in fields track by key">
+                <input  class="form-control" type="text"  placeholder="{{title}}" value="{{file[key]}}" name="{{field + '['+$parent.$index+']['+key+']'}}">
+
+            </div>
+            <div class="col-md-1 form-group">
+                <span class="input-group-btn input-group-sm">
+                    <a class="btn btn-fab btn-fab-mini" ng-click="remove($index)">
+                        <i class="material-icons">highlight_off</i>
+                    </a>
+                </span>
+            </div>
+            <div style="display: none;" ng-repeat="(key,value) in hidden_fields track by key">
+                <input type="hidden" name="{{field + '['+$parent.$index+']['+key+']'}}" value="{{value}}">
+            </div>
+        </div>
+
+
+
+        <hr>
+    </div>
+
+    <div>
+        <a class="btn btn-success btn-raised" ng-click="add()">Добавить ссылку на видео</a>
+    </div>
+    <span class="help-block" style="display: block" ng-show="error" ng-bind="error"></span>
+</div>

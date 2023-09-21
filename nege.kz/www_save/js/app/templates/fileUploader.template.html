@@ -1,0 +1,30 @@
+<div class="form-group is-empty is-fileinput" ng-class="{'has-error': error}">
+    <label class="control-label" ng-bind="label" for="{{field}}"></label>
+    <input class="_file_input" type="file" style="display:none;">
+    <input type="hidden" name="{{field}}" ng-model="value" value="{{value}}">
+    <div class="input-group">
+        <span>
+             <input ng-model="name" id="{{field}}" readonly="" class="form-control" type="text" placeholder="Файл не загружен">
+             <div class="progress" ng-show="loading">
+                 <div class="progress-bar progress-bar-info" style="{{'width:'+progress+'%'}}"></div>
+             </div>
+        </span>
+          <span class="input-group-btn input-group-sm" ng-show="url">
+            <a class="btn btn-fab btn-fab-mini" ng-href="{{url}}" target="_blank">
+                <i class="material-icons">get_app</i>
+            </a>
+        </span>
+        <span class="input-group-btn input-group-sm" ng-show="loading || value">
+            <a class="btn btn-fab btn-fab-mini" ng-click="abort()">
+                <i class="material-icons">highlight_off</i>
+            </a>
+        </span>
+        <span class="input-group-btn input-group-sm" ng-hide="loading || value" ng-click="openFileDialog()">
+            <a class="btn btn-fab btn-fab-mini">
+                <i class="material-icons">attach_file</i>
+            </a>
+        </span>
+    </div>
+    <span class="help-block" ng-bind="error" ng-show="error" style="display:block;"></span>
+    <span class="material-input"></span>
+</div>

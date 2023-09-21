@@ -1,0 +1,3 @@
+<div>
+    <?=$label?>: <?=$text?>
+</div>

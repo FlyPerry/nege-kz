@@ -1,0 +1,109 @@
+
+.ui-datepicker {
+    background: #fff;
+    border: 1px solid #aaa;
+    text-align: center;
+}
+.ui-datepicker-calendar {
+    margin: 5px;
+    border-spacing: 2px;
+    border-collapse: separate;
+}
+.ui-datepicker-header {
+    border: 1px solid #ccc;
+    background: #aaa;
+    line-height: 25px;
+    height: 25px;
+    color: #fff;
+    font-weight: bold;
+    margin: 5px;
+}
+.ui-datepicker-next,
+.ui-datepicker-prev {
+    position: absolute;
+    top: 13px;
+    display: block;
+    width: 10px;
+    height: 10px;
+}
+.ui-datepicker-next {
+    right: 10px;
+}
+.ui-datepicker-prev {
+    left: 10px;
+}
+.ui-datepicker-next .ui-icon,
+.ui-datepicker-prev .ui-icon {
+    display: block;
+    width: 0;
+    height: 0;
+    border: 5px solid;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+.ui-datepicker-next .ui-icon {
+    border-color:  transparent transparent transparent #fff;
+}
+.ui-datepicker-prev .ui-icon {
+    border-color:  transparent #fff transparent transparent;
+}
+.ui-datepicker-calendar td a {
+    display: block;
+    background: #e6e6e6;
+    border: 1px solid #d3d3d3;
+    padding: 2px 3px;
+    color: #222;
+    text-decoration: none;
+}
+.ui-datepicker-calendar td .ui-datepicker-today,
+.ui-datepicker-calendar td .ui-state-hover {
+    background: #dadada;
+    border: 1px solid #999;
+    color: #555;
+    text-decoration: none;
+}
+.ui-datepicker-calendar td .ui-datepicker-today {
+    font-weight: bold;
+}
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+.ui-timepicker-rtl{ direction: rtl; }
+.ui-timepicker-rtl dl { text-align: right; }
+.ui-timepicker-rtl dl dd { margin: 0 65px 10px 10px; }
+
+/* Fix conflict between google maps and bootstrap*/
+.mappoint .map img {
+    max-width: none;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    left: -160px;
+}
+.row-fluid .span10  {
+    padding-right: 80px;
+}
+
+body .modal-select {
+    /* new custom width */
+    width: 1000px;
+    /* must be half of the width, minus scrollbar on the left (30px) */
+    margin-left: -470px;
+}
+
+p.single-value {
+    /*margin-top: 16px;*/
+    /*margin-bottom: 16px;*/
+
+}
+.custom-label input {
+    margin-top: 0;
+}
+.single-value .alert {
+    line-height: 35px;
+}

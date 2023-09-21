@@ -1,0 +1,6 @@
+.open-news.spoiler-head.folded .link span:before {
+    content: "Jasırw";
+}
+.open-news.spoiler-head .link span:before {
+    content: "Körsetw";
+}

@@ -1,0 +1,94 @@
+<div class="form-group" ng-class="{'has-error': error}">
+    <label  class="control-label" ng-bind="label"></label>
+    <input type="file" multiple style="display:none;">
+    <input name="{{field + '[0]'}}" type="hidden">
+    <div ng-repeat="(key,value) in hidden_fields">
+        <input type="hidden" name="{{field + '[0]['+key+']'}}" value="{{value}}">
+    </div>
+
+    <div  ng-repeat="file in files">
+        <image-uploader
+                file="file"
+                size="{{size}}"
+                on-cancel="remove(file)"
+                field="{{field + '['+$index+']['+imageField+']'}}"
+                label="{{'Изображение галереи: ' + ($index + 1)}}"
+                ng-if="file.name"
+                aspect="{{aspect}}"
+                watermark="watermark"
+                >
+        </image-uploader>
+
+        <image-uploader
+                image-id="{{file.id}}"
+                image="{{file.image}}"
+                original-image="{{file.original_image}}"
+                size="{{size}}"
+                on-cancel="remove(file)"
+                field="{{field + '['+$index+']['+imageField+']'}}"
+                label="{{'Изображение галереи: ' + ($index + 1)}}"
+                aspect="{{aspect}}"
+                ng-if="!file.name && !file.uploadUrl"
+                >
+        </image-uploader>
+
+        <image-uploader
+                size="{{size}}"
+                on-cancel="remove(file)"
+                field="{{field + '['+$index+']['+imageField+']'}}"
+                label="{{'Изображение галереи: ' + ($index + 1)}}"
+                aspect="{{aspect}}"
+                ng-if="file.uploadUrl"
+                download-url="{{file.uploadUrl}}"
+                watermark="watermark"
+                >
+        </image-uploader>
+
+        <div class="row">
+            <div class="col-md-2 form-group " ng-repeat="(key, title) in fields track by key">
+                <input  class="form-control" type="text"  placeholder="{{title}}" value="{{file[key]}}" name="{{field + '['+$parent.$index+']['+key+']'}}">
+            </div>
+            <div style="display: none;" ng-repeat="(key,value) in hidden_fields track by key">
+                <input type="hidden" name="{{field + '['+$parent.$index+']['+key+']'}}" value="{{value}}">
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <div>
+        <a class="btn btn-success btn-raised" ng-click="openFileDialog()">Выбрать файлы</a>
+        <a class="btn btn-success btn-raised" ng-click="openUrlUploadDialog()">Загрузить по ссылкам</a>
+        <span class="checkbox" style="display: inline-block; margin-left: 10px">
+            <label>
+                <input type="checkbox" ng-model="watermark"> Ватермарк
+            </label>
+        </span>
+    </div>
+    <span class="help-block" style="display: block" ng-show="error" ng-bind="error"></span>
+
+
+
+
+    <div class="modal fade url-list-modal" data-keyboard="false" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Загрузка по url</h4>
+                </div>
+                <div class="modal-body" style="overflow: hidden">
+                    <div>
+                        <div class="form-group">
+                            <label class="control-label">Введите ссылки</label>
+                            <textarea class="form-control" ng-model="_url"></textarea>
+                        </div>
+                        <a class="btn btn-success btn-raised pull-right" ng-click="urlUpload(_url)">
+                            Загрузить
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

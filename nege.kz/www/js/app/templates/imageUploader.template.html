@@ -1,0 +1,91 @@
+<div class="form-group is-empty is-fileinput" ng-class="{'has-error': error}">
+    <label class="control-label" ng-bind="label"></label>
+    <input class="_file_input" type="file" style="display:none;">
+    <input type="hidden" name="{{field}}" ng-model="imageId" value="{{imageId}}">
+    <div class="input-group" style="margin-top: 10px">
+        <span>
+             <img ng-src="{{image}}" ng-style="{width: size+'px'}" ng-if="image">
+             <div class="progress" ng-show="loading">
+                 <div class="progress-bar progress-bar-info" ng-style="{width: progress+'%'}"></div>
+             </div>
+        </span>
+        <span class="input-group-btn input-group-sm" ng-show="!originalImage && !loading && !file" style="display: none">
+            <span class="checkbox">
+                <label>
+                    <input type="checkbox" ng-model="watermark"> Ватермарк
+                </label>
+            </span>
+        </span>
+        <span class="input-group-btn input-group-sm" ng-show="image">
+            <a class="btn btn-fab btn-fab-mini" ng-click="openCropDialog()" data-original-title="Обрезка изображения" data-toggle="tooltip" data-placement="top">
+                <i class="material-icons">aspect_ratio</i>
+            </a>
+        </span>
+         <span class="input-group-btn input-group-sm" ng-show="loading || originalImage">
+            <a class="btn btn-fab btn-fab-mini" ng-click="cancel()" data-original-title="Удалить" data-toggle="tooltip" data-placement="top">
+                <i class="material-icons">highlight_off</i>
+            </a>
+        </span>
+
+         <span class="input-group-btn input-group-sm" ng-hide="loading || image">
+            <a class="btn btn-fab btn-fab-mini" ng-click="openUrlFileDialog()" data-original-title="Загрузка по url" data-toggle="tooltip" data-placement="top">
+                <i class="material-icons">file_upload</i>
+            </a>
+        </span>
+
+        <span class="input-group-btn input-group-sm" ng-hide="loading || image">
+            <a class="btn btn-fab btn-fab-mini" ng-click="openFileDialog()"  data-original-title="Выбрать файл" data-toggle="tooltip" data-placement="top">
+                <i class="material-icons">attach_file</i>
+            </a>
+        </span>
+    </div>
+    <span class="help-block" ng-bind="error" ng-show="error" style="display:block;"></span>
+    <span class="material-input"></span>
+
+    <div class="modal fade crop-dialog" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Обрезка изображения</h4>
+                </div>
+                <div class="modal-body">
+                    <img class="image" ng-src="{{originalImage}}" style="max-height: 50vh">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-raised" ng-click="crop()">Обрезать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade upload-dialog" data-keyboard="false" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Загрузка по url</h4>
+                </div>
+                <div class="modal-body" style="overflow: hidden">
+                    <div>
+                        <div class="form-group">
+                            <label class="control-label">Введите ссылку</label>
+                            <input class="form-control" type="text" ng-disabled="loading" ng-model="_url">
+                        </div>
+                        <div class="alert alert-dismissible alert-danger" ng-if="error">
+                            <strong ng-bind="error"></strong>
+                        </div>
+                        <a class="btn btn-success btn-raised pull-right" ng-class="{disabled: loading || !_url}" ng-click="urlUpload(_url)">
+                            <i class="fa" ng-class="{'fa-upload': !loading, 'fa-circle-o-notch fa-spin': loading}"></i> {{loading ? 'Загрузка' : 'Загрузить'}}
+                        </a>
+                        <a class="btn btn-danger btn-raised pull-right" ng-click="cancelUrlUpload()" ng-if="loading">Отмена</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

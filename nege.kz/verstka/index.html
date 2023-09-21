@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="jquery.custom-scroll.css">
+	<!--[if lt IE 9]> 
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+	<![endif]-->
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="js/jquery.custom-scroll.js"></script>
+	<script>
+	$(function(){
+	  $('.slider4').bxSlider({
+		slideWidth: 210,
+		minSlides: 4,
+		maxSlides: 4,
+		moveSlides: 1,
+		slideMargin: 72
+	  });
+	});
+	</script>
+	<script>
+	$(document).ready(function(){
+		$('.player .player-menu').click(function() {
+			$(this).toggleClass('opened');
+			$('.player .play-list').toggleClass('opened');
+			$('.player .name').toggleClass('none');
+			$('.player .scale').toggleClass('opened');
+		});
+	});
+	</script>
+	<script type="text/javascript">
+		$(function() {
+			$('.main-news-right-items .last-news').customScroll();
+		});
+	</script>
+</head>
+<body>
+	<div class="banner"><img src="https://ltdfoto.ru/images/2023/03/15/1920x100.jpg"></div>
+	<header class="header">
+		<div class="logo">
+			<a href="/"><img src="img/logo.png"></a>
+		</div>
+		<div class="header-icons">
+			<div class="search">
+				<img src="img/search.png">
+				<form>
+					<input type="text"><input type="submit" value="">
+				</form>
+			</div>
+			<a href="#">KAZ</a>
+			<a href="#"><img src="img/reload.png" class="reload"></a>
+		</div>
+		<div class="wrap">
+			<nav class="top-menu">
+				<ul>
+					<li><a href="#">главная</a></li>
+					<li><a href="#">в мире</a></li>
+					<li><a href="#">казахстан</a></li>
+					<li><a href="#">экономика</a></li>
+					<li><a href="#">спорт</a></li>
+					<li><a href="#">Наука</a></li>
+					<li><a href="#">Аналитика</a></li>
+					<li><a href="#">общество</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section class="player">
+		<div class="wrap">
+			<div class="left-buttons">
+				<a href="#" class="prev"><img src="img/prev.png"></a>
+				<a href="#" class="pause"><img src="img/pause.png"></a>
+				<a href="#" class="next"><img src="img/next.png"></a>
+			</div>
+			<div class="name">
+				<marquee>13.01.16  Прогремел взрыв на центральной площади турецкой столицы</marquee>
+			</div>
+			<div class="right-buttons">
+				<a href="#" class="sound"><img src="img/sound.png"></a>
+				<a href="#" class="player-menu"></a>
+			</div>
+			<div class="time">
+				1:55/4:34
+			</div>
+			<div class="scale">
+				<div class="played" style="width: 40%;"></div>
+			</div>
+			<div class="play-list">
+				<div class="item current">
+					<div class="button">
+						<a href="#"><img src="img/pause.png"></a>
+					</div>
+					<div class="song-name">
+						<span>13.01.16</span> Прогремел взрыв на центральной площади турецкой столицы
+					</div>
+					<div class="song-time">
+						1:55/4:34
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="item">
+					<div class="button">
+						<a href="#"><img src="img/play.png"></a>
+					</div>
+					<div class="song-name">
+						<span>13.01.16</span> Жером Вальке окончательно снят с должности генсека FIFA
+					</div>
+					<div class="song-time">
+						9:45
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="item">
+					<div class="button">
+						<a href="#"><img src="img/play.png"></a>
+					</div>
+					<div class="song-name">
+						<span>13.01.16</span> Мэрия опровергла информацию о планах снести киоски с театральными билетами
+					</div>
+					<div class="song-time">
+						19:45
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="item">
+					<div class="button">
+						<a href="#"><img src="img/play.png"></a>
+					</div>
+					<div class="song-name">
+						<span>12.01.16</span> Пекин откажется от отопления углем к 2020 году – СМИ
+					</div>
+					<div class="song-time">
+						3:45
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="main-news">
+		<div class="wrap">
+			<div class="main-news-left-item">
+				<div class="news-label">экономика</div>
+				<div class="image" style="background: url('img/main.jpg') no-repeat center; background-size: cover;"></div>
+				<a href="#" class="zag">Курс доллара вырос еще на 5 тенге <img src="img/live.png"></a>
+				По результатам торгов средневзвешенный курс доллара США с расчетами T+0 в тенге (USDKZT_TOD) составил 367,61 тенге за доллар США при объеме торгов 79 800 тыс. долларов США.
+				<ul>
+					<li><a href="#">Казахстанцы не почувствовали на себе финансовый кризис</a></li>
+					<li><a href="#">Мощный взрыв прогремел на центральной площади Стамбула <img src="img/video.png"></a></li>
+				</ul>
+			</div>
+			<div class="main-news-right-items">
+				<div class="zag">Последние новости</div>
+				<div class="last-news">
+					<div class="item">
+						13.01.16 <a href="#">Минэнерго готово возобновить поставки электроэнергии Украине по просьбе Киева</a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Жером Вальке окончательно снят с должности генсека FIFA</a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Мэрия опровергла информацию о планах снести киоски с театральными билетами</a>
+					</div>
+					<div class="item">
+						12.01.16 <a href="#">Пекин откажется от отопления углем к 2020 году – СМИ <img src="img/live.png"></a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Минэнерго готово возобновить поставки электроэнергии Украине по просьбе Киева</a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Жером Вальке окончательно снят с должности генсека FIFA</a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Мэрия опровергла информацию о планах снести киоски с театральными билетами</a>
+					</div>
+					<div class="item">
+						12.01.16 <a href="#">Пекин откажется от отопления углем к 2020 году – СМИ <img src="img/live.png"></a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Минэнерго готово возобновить поставки электроэнергии Украине по просьбе Киева</a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Жером Вальке окончательно снят с должности генсека FIFA</a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Мэрия опровергла информацию о планах снести киоски с театральными билетами</a>
+					</div>
+					<div class="item">
+						12.01.16 <a href="#">Пекин откажется от отопления углем к 2020 году – СМИ <img src="img/live.png"></a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Минэнерго готово возобновить поставки электроэнергии Украине по просьбе Киева</a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Жером Вальке окончательно снят с должности генсека FIFA</a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Мэрия опровергла информацию о планах снести киоски с театральными билетами</a>
+					</div>
+					<div class="item">
+						12.01.16 <a href="#">Пекин откажется от отопления углем к 2020 году – СМИ <img src="img/live.png"></a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Минэнерго готово возобновить поставки электроэнергии Украине по просьбе Киева</a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Жером Вальке окончательно снят с должности генсека FIFA</a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Мэрия опровергла информацию о планах снести киоски с театральными билетами</a>
+					</div>
+					<div class="item">
+						12.01.16 <a href="#">Пекин откажется от отопления углем к 2020 году – СМИ <img src="img/live.png"></a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Минэнерго готово возобновить поставки электроэнергии Украине по просьбе Киева</a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Жером Вальке окончательно снят с должности генсека FIFA</a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Мэрия опровергла информацию о планах снести киоски с театральными билетами</a>
+					</div>
+					<div class="item">
+						12.01.16 <a href="#">Пекин откажется от отопления углем к 2020 году – СМИ <img src="img/live.png"></a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Минэнерго готово возобновить поставки электроэнергии Украине по просьбе Киева</a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Жером Вальке окончательно снят с должности генсека FIFA</a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Мэрия опровергла информацию о планах снести киоски с театральными билетами</a>
+					</div>
+					<div class="item">
+						12.01.16 <a href="#">Пекин откажется от отопления углем к 2020 году – СМИ <img src="img/live.png"></a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Минэнерго готово возобновить поставки электроэнергии Украине по просьбе Киева</a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Жером Вальке окончательно снят с должности генсека FIFA</a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Мэрия опровергла информацию о планах снести киоски с театральными билетами</a>
+					</div>
+					<div class="item">
+						12.01.16 <a href="#">Пекин откажется от отопления углем к 2020 году – СМИ <img src="img/live.png"></a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Минэнерго готово возобновить поставки электроэнергии Украине по просьбе Киева</a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Жером Вальке окончательно снят с должности генсека FIFA</a>
+					</div>
+					<div class="item">
+						13.01.16 <a href="#">Мэрия опровергла информацию о планах снести киоски с театральными билетами</a>
+					</div>
+					<div class="item">
+						12.01.16 <a href="#">Пекин откажется от отопления углем к 2020 году – СМИ <img src="img/live.png"></a>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</section>
+	<section class="categories-news">
+		<div class="wrap">
+			<div class="zag">Казахстан</div>
+			<div class="last-news-list">
+				<div class="item">
+					<div class="image" style="background: url('img/news1.jpg') no-repeat center; background-size: cover;"></div>
+					<div class="content">
+						13 января <a href="#" class="news-name">Кого уволят в первую очередь из фонда «Самрук-Казына» <img src="img/video.png"></a>
+						<p>Кадровые изменения произведены в рамках перехода фонда "Самрук-Казына" на новую организационную структуру. В соответствии с ней предполагается сокращение топ-менеджмента Фонда в два раза, сообщила пресс-служба фонда.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image" style="background: url('img/news2.jpg') no-repeat center; background-size: cover;"></div>
+					<div class="content">
+						13 января <a href="#" class="news-name">Депутат мажилиса прогнозирует рост доллара в ближайшие 3 месяца</a>
+						<p>Кадровые изменения произведены в рамках перехода фонда "Самрук-Казына" на новую организационную структуру. В соответствии с ней предполагается сокращение топ-менеджмента Фонда в два раза, сообщила пресс-служба фонда.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image" style="background: url('img/news3.jpg') no-repeat center; background-size: cover;"></div>
+					<div class="content">
+						13 января <a href="#" class="news-name">Экс глава KASE назначен председателем Национальной инвестиционной корпорации <img src="img/live.png"></a>
+						<p>Кадровые изменения произведены в рамках перехода фонда "Самрук-Казына" на новую организационную структуру. В соответствии с ней предполагается сокращение топ-менеджмента Фонда в два раза, сообщила пресс-служба фонда.</p>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="zag">Экономика</div>
+			<div class="last-news-list">
+				<div class="item">
+					<div class="image" style="background: url('img/news1.jpg') no-repeat center; background-size: cover;"></div>
+					<div class="content">
+						13 января <a href="#" class="news-name">Кого уволят в первую очередь из фонда «Самрук-Казына» <img src="img/video.png"></a>
+						<p>Кадровые изменения произведены в рамках перехода фонда "Самрук-Казына" на новую организационную структуру. В соответствии с ней предполагается сокращение топ-менеджмента Фонда в два раза, сообщила пресс-служба фонда.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image" style="background: url('img/news2.jpg') no-repeat center; background-size: cover;"></div>
+					<div class="content">
+						13 января <a href="#" class="news-name">Депутат мажилиса прогнозирует рост доллара в ближайшие 3 месяца</a>
+						<p>Кадровые изменения произведены в рамках перехода фонда "Самрук-Казына" на новую организационную структуру. В соответствии с ней предполагается сокращение топ-менеджмента Фонда в два раза, сообщила пресс-служба фонда.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image" style="background: url('img/news3.jpg') no-repeat center; background-size: cover;"></div>
+					<div class="content">
+						13 января <a href="#" class="news-name">Экс глава KASE назначен председателем Национальной инвестиционной корпорации <img src="img/live.png"></a>
+						<p>Кадровые изменения произведены в рамках перехода фонда "Самрук-Казына" на новую организационную структуру. В соответствии с ней предполагается сокращение топ-менеджмента Фонда в два раза, сообщила пресс-служба фонда.</p>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="index-page-adv right">
+				<a href="#"><img src="img/subscribe.jpg"></a>
+			</div>
+			<div class="zag">Наука</div>
+			<div class="last-news-list">
+				<div class="item">
+					<div class="image" style="background: url('img/news1.jpg') no-repeat center; background-size: cover;"></div>
+					<div class="content">
+						13 января <a href="#" class="news-name">Кого уволят в первую очередь из фонда «Самрук-Казына» <img src="img/video.png"></a>
+						<p>Кадровые изменения произведены в рамках перехода фонда "Самрук-Казына" на новую организационную структуру. В соответствии с ней предполагается сокращение топ-менеджмента Фонда в два раза, сообщила пресс-служба фонда.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image" style="background: url('img/news2.jpg') no-repeat center; background-size: cover;"></div>
+					<div class="content">
+						13 января <a href="#" class="news-name">Депутат мажилиса прогнозирует рост доллара в ближайшие 3 месяца</a>
+						<p>Кадровые изменения произведены в рамках перехода фонда "Самрук-Казына" на новую организационную структуру. В соответствии с ней предполагается сокращение топ-менеджмента Фонда в два раза, сообщила пресс-служба фонда.</p>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="zag">Аналитика</div>
+			<div class="last-news-list">
+				<div class="item">
+					<div class="image" style="background: url('img/news1.jpg') no-repeat center; background-size: cover;"></div>
+					<div class="content">
+						13 января <a href="#" class="news-name">Кого уволят в первую очередь из фонда «Самрук-Казына» <img src="img/video.png"></a>
+						<p>Кадровые изменения произведены в рамках перехода фонда "Самрук-Казына" на новую организационную структуру. В соответствии с ней предполагается сокращение топ-менеджмента Фонда в два раза, сообщила пресс-служба фонда.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image" style="background: url('img/news2.jpg') no-repeat center; background-size: cover;"></div>
+					<div class="content">
+						13 января <a href="#" class="news-name">Депутат мажилиса прогнозирует рост доллара в ближайшие 3 месяца</a>
+						<p>Кадровые изменения произведены в рамках перехода фонда "Самрук-Казына" на новую организационную структуру. В соответствии с ней предполагается сокращение топ-менеджмента Фонда в два раза, сообщила пресс-служба фонда.</p>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="index-page-adv">
+				<a href="#"><img src="img/museoen.jpg"></a>
+			</div>
+			<div class="index-page-infographics">
+				<div class="news-label">Инфографика</div>
+				<a href="#"><img src="img/infografika.jpg"></a>
+			</div>
+			<div class="zag">Общество</div>
+			<div class="last-news-list big">
+				<div class="item">
+					<div class="image" style="background: url('img/news1.jpg') no-repeat center; background-size: cover;"></div>
+					<div class="content">
+						13 января <a href="#" class="news-name">Замок «Ласточкино гнездо» в Ялте находится в аварийном состоянии <img src="img/video.png"></a>
+						<p>Часть замка "Ласточкино гнездо" находится в аварийном состоянии, посещение объекта ограничено.</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="last-news-list small">
+				<div class="item">
+					<div class="image" style="background: url('img/news1.jpg') no-repeat center; background-size: cover;"></div>
+					<div class="content">
+						13 января <a href="#" class="news-name">Кого уволят в первую очередь из фонда «Самрук-Казына» <img src="img/video.png"></a>
+						<p>Кадровые изменения произведены в рамках перехода фонда "Самрук-Казына" на новую организационную структуру.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image" style="background: url('img/news2.jpg') no-repeat center; background-size: cover;"></div>
+					<div class="content">
+						13 января <a href="#" class="news-name">Депутат мажилиса прогнозирует рост доллара в ближайшие 3 месяца</a>
+						<p>Кадровые изменения произведены в рамках перехода фонда "Самрук-Казына" на новую организационную структуру.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image" style="background: url('img/news3.jpg') no-repeat center; background-size: cover;"></div>
+					<div class="content">
+						13 января <a href="#" class="news-name">Депутат мажилиса прогнозирует рост доллара в ближайшие 3 месяца</a>
+						<p>Кадровые изменения произведены в рамках перехода фонда "Самрук-Казына" на новую организационную структуру.</p>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</section>
+	<section class="index-page-advs">
+		<div class="wrap">
+			<div class="slider">
+				<div class="name">
+					<span>Реклама</span>
+				</div>
+				<div class="slider4">
+					<div class="slide">
+						<img src="img/slider1.jpg"><br/>
+						Ваши планы на 2016 год реализуются!
+					</div>
+					<div class="slide">
+						<img src="img/slider2.jpg"><br/>
+						MEGA – сеть крупнейших торгово-развлекательных центров в Казахстане.
+					</div>
+					<div class="slide">
+						<img src="img/slider3.jpg"><br/>
+						Домашний уют с товарами-экспертами
+					</div>
+					<div class="slide">
+						<img src="img/slider4.jpg"><br/>
+						Ваш гид в мире интересных новостей!
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="wrap">
+			<div class="logo">
+				<a href="/"><img src="img/logo2.png"></a><br/><br/><br/>
+				2016 © Новостной портал News Feed
+			</div>
+			<nav class="bottom-menu">
+				<a href="#" class="white">Сервисы</a><br/>
+				<a href="#">RSS</a> <a href="#">Мобильная версия</a> <a href="#">Справочник</a><br/><br/>
+				<a href="#" class="white">Редакция</a><br/>
+				<a href="#">О компании</a> <a href="#">Менеджмент</a> <a href="#">Сотрудничество</a>
+			</nav>
+			<nav class="bottom-right-menu">
+				<a href="#" class="white">Условия</a> <a href="#" class="white">Политика</a> <a href="#" class="white">Авторские права</a>
+				<div class="social">
+					<a href="#" class="fb"></a>
+					<a href="#" class="tw"></a>
+					<a href="#" class="tu"></a>
+					<a href="#" class="vk"></a>
+				</div>
+			</nav>
+		</div>
+	</footer>
+</body>
+</html>

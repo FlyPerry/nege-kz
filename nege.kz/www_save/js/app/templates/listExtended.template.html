@@ -1,0 +1,27 @@
+<div class="form-group" ng-class="{'has-error': error}">
+    <label for="{{field}}"  class="control-label float-left" ng-bind="label"></label>
+
+    <div class="col-md-12 form-group">
+        <input type="text" placeholder="{{label}}" class="form-control" id="{{field}}" ng-disabled="disabled" ng-change="selectItem(selected)" ng-model="selected">
+        <!--<select class="form-control" id="{{field}}" ng-disabled="disabled" ng-change="selectItem(selected)" ng-model="selected">-->
+            <!--<option value="{{id}}" ng-repeat="(id, name) in options track by id" ng-if="check(id)">{{name}}</option>-->
+        <!--</select>-->
+        <!--<div class="col-md-2 form-group">-->
+            <!--<input type="button" value="Добавить" class="btn btn-primary btn-raised"/>-->
+        <!--</div>-->
+        <div>
+            <ul>
+                <li ng-repeat="(id, name) in options track by id" ng-if="check(id)" id="{{id}}">{{name}}</li>
+            </ul>
+        </div>
+    </div>
+    <!--<input type="hidden" name="model[{{field}}][]" value="0">-->
+
+    <!--<div ng-repeat="value in values track by value">-->
+        <!--{{options[value]}}-->
+        <!--<button ng-click="removeItem(value)" style="float: none" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+        <!--<input type="hidden" name="model[{{field}}][]" value="{{value}}">-->
+    <!--</div>-->
+
+    <span class="help-block" style="display: block" ng-show="error" ng-bind="error"></span>
+</div>

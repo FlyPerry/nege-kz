@@ -1,0 +1,9 @@
+<div class="form-group" ng-class="{'has-error' : error}">
+    <input type="hidden" name="{{field}}" value="{{value}}">
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" ng-click="check()" ng-disabled="checkboxDisabled" ng-checked="value > 0"> {{label}}
+        </label>
+    </div>
+    <span class="help-block" style="display: block" ng-show="error" ng-bind="error"></span>
+</div>
